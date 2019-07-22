@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url(file:///C:/Users/Aryan/Desktop/img.jpg);
+            background-size: cover;
+            height: 100vh;
+        }
+        #sidenav{
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            position: fixed;
+            background: #fff;
+            overflow: hidden;
+            transition: all ease-in-out 0.5s;
+            padding-top: 60px;
+        }
+        #sidenav a{
+            text-decoration: none;
+            color: #000;
+        }
+        #sidenav a:hover{
+            color: aqua;
+        }
+        #sidenav ul li{
+            list-style: none;
+            font-size: 20px;
+            padding: 60px 50px 24px 80px;
+        }
+        #sidenav .close{
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        #content{
+            transition: margin-left .5s;
+            padding: 16px;
+            color: #313131;
+        }
+        h1{
+            text-align: center;
+            font-size: 70px;
+        }
+        p{
+            text-align: center;
+            font-size: 20px;
+        }
+        span{
+            font-size: 35px;
+            cursor: pointer;
+            color: #000;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidenav">
+        <a href="#" class="close" onclick="closeNav()">&times;</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <span onclick="openNav()">&#9776;</span>
+    <div id="content">
+        <h1>Side NavBar</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+</body>
+<script>
+    function openNav(){
+        document.getElementById("sidenav").style.width = "280px";
+        document.getElementById("content").style.marginLeft = "280px";
+    }
+    function closeNav(){
+        document.getElementById("sidenav").style.width = "0px";
+        document.getElementById("content").style.marginLeft = "0px";
+    }
+</script>
+</html>
